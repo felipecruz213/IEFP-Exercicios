@@ -1,0 +1,46 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. prog03.
+       AUTHOR. .
+       INSTALLATION.  where.
+       DATE-WRITTEN.  02/10/2025.
+       DATE-COMPILED. 02/10/2025.
+       SECURITY.
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+       SOURCE-COMPUTER. pc.
+       OBJECT-COMPUTER. pc.
+       SPECIAL-NAMES.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+       DATA DIVISION.
+        FILE SECTION.
+        WORKING-STORAGE SECTION.
+        77 NUMERO1         PIC 9(2).
+        77 NUMERO2         PIC 9(2).
+        77 NUMERO3         PIC 9(2).
+        77 TEMP            PIC X(2).
+
+        LINKAGE SECTION.
+       PROCEDURE DIVISION.
+       MAIN-PROCEDURE.
+           DISPLAY "DIGITE O 1. NUMERO:" AT 0101.
+           ACCEPT TEMP AT 0120.
+           MOVE FUNCTION NUMVAL(TEMP) TO NUMERO1.
+           DISPLAY "DIGITE O 2. NUMERO:" AT 0301.
+           ACCEPT TEMP AT 0320.
+           MOVE FUNCTION NUMVAL(TEMP) TO NUMERO2.
+           DISPLAY "DIGITE O 3. NUMERO:" AT 0501.
+           ACCEPT TEMP AT 0520.
+           MOVE FUNCTION NUMVAL(TEMP) TO NUMERO3.
+       PROCESSAMENTO.
+           IF (NUMERO1>NUMERO2 AND NUMERO1>NUMERO3) THEN
+                   DISPLAY "O 1 NUMERO E MAIOR." AT 0701
+           ELSE
+               IF (NUMERO2>NUMERO1 AND NUMERO2>NUMERO3) THEN
+                   DISPLAY "O NUMERO 2 E MAIOR" AT 0701
+                   ELSE
+                       DISPLAY "O NUMERO 3 E MAIOR" AT 0701
+                   END-IF
+           END-IF.
+               
+             STOP RUN.
