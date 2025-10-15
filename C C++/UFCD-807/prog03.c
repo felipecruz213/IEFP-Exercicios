@@ -7,7 +7,7 @@ int main(){
         printf("Introduza o numero do mês: ");
         scanf("%d", &NumeroMes);
 
-        if (NumeroMes > 12 || NumeroMes < 1)
+        if (NumeroMes > 13 || NumeroMes < 0)
         {
             printf("TEM QUE INSERIR UM NUMERO DE MES VALIDO!!!!!");
         }

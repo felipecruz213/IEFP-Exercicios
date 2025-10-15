@@ -11,10 +11,12 @@
             "id": "d84b565994eeefee",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nova aba"
+              "type": "pdf",
+              "state": {
+                "file": "COBOL/GnuCOBOL 3.2 - Programmer's Guide.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "GnuCOBOL 3.2 - Programmer's Guide"
             }
           }
         ]
@@ -167,8 +169,8 @@
   },
   "active": "b1ead0f546496346",
   "lastOpenFiles": [
-    "SQL/Sem título.md",
     "Sem título.md",
+    "SQL/Sem título.md",
     "SQL/UFCD-10788",
     "COBOL/GnuCOBOL 3.2 - Programmer's Guide.pdf",
     "SQL",
