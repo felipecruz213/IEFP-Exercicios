@@ -11,12 +11,14 @@
             "id": "d84b565994eeefee",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "COBOL/GnuCOBOL 3.2 - Programmer's Guide.pdf"
+                "file": "COBOL/UFCD-807/1. Introdução.md",
+                "mode": "source",
+                "source": true
               },
-              "icon": "lucide-file-text",
-              "title": "GnuCOBOL 3.2 - Programmer's Guide"
+              "icon": "lucide-file",
+              "title": "1. Introdução"
             }
           }
         ]
@@ -92,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Bem-vindo.md",
+                "file": "COBOL/UFCD-807/1. Introdução.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Links inversos para Bem-vindo"
+              "title": "Links inversos para 1. Introdução"
             }
           },
           {
@@ -167,15 +169,21 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "b1ead0f546496346",
+  "active": "d84b565994eeefee",
   "lastOpenFiles": [
+    "COBOL/UFCD-807/Estrutura Básica de um programa em COBOL.md",
+    "COBOL/UFCD-807/1. Introdução.md",
+    "C/UFCD-809/1. Introdução.md",
+    "C/The GNU C Library Reference Manual.pdf",
+    "C/The GNU C Programming Tutorial.pdf",
+    "COBOL/GnuCOBOL 3.2 - Programmer's Guide.pdf",
+    "C/UFCD-809",
+    "C",
+    "Bem-vindo.md",
     "Sem título.md",
     "SQL/Sem título.md",
     "SQL/UFCD-10788",
-    "COBOL/GnuCOBOL 3.2 - Programmer's Guide.pdf",
     "SQL",
-    "COBOL/UFCD-807/Estrutura Básica de um programa em COBOL.md",
-    "Bem-vindo.md",
     "Sem título.base",
     "COBOL/UFCD-807",
     "COBOL"

@@ -1,3 +1,5 @@
+//Uma função que recebe dois valores e mostra qual o maior
+
 #include<stdio.h>
 
 int a,b;

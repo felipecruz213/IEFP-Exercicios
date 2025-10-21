@@ -17,7 +17,7 @@ int main(){
 
     int indiceMaior = 0;
     int indiceMaisUm = 0;
-    
+    //Itera atraves da array e compara com o proximo valor
     for (i = 0; i < count; i++) {
         indiceMaisUm = i + 1;
         if(indiceMaisUm < totalNumeros){
