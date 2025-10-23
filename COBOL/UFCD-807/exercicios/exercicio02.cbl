@@ -1,0 +1,199 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. exercicio02.
+       AUTHOR. .
+       INSTALLATION.  where.
+       DATE-WRITTEN.  22/10/2025.
+       DATE-COMPILED. 22/10/2025.
+       SECURITY.
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+       SOURCE-COMPUTER. pc.
+       OBJECT-COMPUTER. pc.
+       SPECIAL-NAMES.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+       DATA DIVISION.
+        FILE SECTION.
+        WORKING-STORAGE SECTION.
+       77 MES-CALCULO              PIC 9(2).
+           88 VALIDAR-MES-CALCULO VALUES 1 THRU 12.
+
+       77 SALARIO-BASE             PIC 9(6).
+       77 ANTIGUIDADE              PIC 9(2).
+           88 VALIDAR-ANTIGUIDADE VALUES 1 THRU 99.
+
+       77 TEMP                      PIC X(6).
+
+       77 VOLUME-VENDAS            PIC 9(6).
+           88 VALIDAR-VOLUME-VENDAS VALUES 1 THRU 999999.
+
+
+       77  TOTAL-COMISSAO          PIC 9(6)V99.
+       77  TOTAL-BASE-COMISSAO     PIC 9(6)V99.
+       77  TOTAL-SEG-SOCIAL        PIC 9(6)V99.
+       77  TOTAL-IRS               PIC 9(6)V99.
+       77  TOTAL-DESCONTOS         PIC 9(6)V99.
+       77  SALARIO-LIQUIDO         PIC 9(6)V99.
+
+       77 TAXA-SEG-SOCIAL          PIC 9(5)V99.
+       77 TAXA-IRS                 PIC 9(5)V99.
+       77 COMISSAO-PORCENTAGEM     PIC 9(5)V99.
+       
+       77 SAIDA                    PIC Z,ZZZ,ZZ9.99.
+       77 SAIDA-INTEIRO            PIC ZZZZZZZZZZZZ.
+
+       77 REPETIR                  PIC A.
+
+       SCREEN SECTION.
+       01 CLS BLANK SCREEN.
+
+       PROCEDURE DIVISION.
+       COMPUTE TAXA-IRS = 0.25.
+       COMPUTE TAXA-SEG-SOCIAL = 0.115.
+
+       INICIO.
+       DISPLAY "-------- CALCULA SALARIO --------" AT 0101.
+       DISPLAY "Insira Numero do mes: " AT 0301.
+       ACCEPT TEMP AT 0323.
+       MOVE TEMP TO MES-CALCULO.
+
+
+       IF (NOT VALIDAR-MES-CALCULO) THEN
+           DISPLAY "TEM QUE INSERIR UM MES VALIDO!!!!!" AT 0401
+           ACCEPT OMITTED AT 0401
+           DISPLAY CLS
+           GO INICIO
+       END-IF.
+           
+
+       DISPLAY "Insira o Volume de Vendas: " AT 0601.
+       ACCEPT TEMP AT 0628.
+       MOVE TEMP TO VOLUME-VENDAS.
+
+       IF (NOT VALIDAR-VOLUME-VENDAS) THEN
+           DISPLAY "TEM QUE INSERIR UM VOLUME VALIDO!!!!!" AT 0701
+           ACCEPT OMITTED AT 0701
+           DISPLAY CLS
+           GO INICIO
+       END-IF.
+
+
+       IF (VOLUME-VENDAS < 10000) THEN
+           MOVE 0.5 TO COMISSAO-PORCENTAGEM
+       END-IF.
+
+       IF (VOLUME-VENDAS >= 10000 AND VOLUME-VENDAS <= 20000) THEN
+           MOVE 0.10 TO COMISSAO-PORCENTAGEM
+       END-IF.
+
+       IF (VOLUME-VENDAS > 20000) THEN
+           MOVE 0.15 TO COMISSAO-PORCENTAGEM
+       END-IF.
+
+       DISPLAY "Insira a Antiguidade: " AT 0801.
+       ACCEPT TEMP AT 0823.
+       MOVE TEMP TO ANTIGUIDADE.
+
+       IF (NOT VALIDAR-ANTIGUIDADE) THEN
+           DISPLAY "TEM QUE INSERIR UMA ANTIGUIDADE VALIDA!!!!" AT 0901
+           ACCEPT OMITTED AT 0901
+           DISPLAY CLS
+           GO INICIO
+       END-IF.
+
+       IF (ANTIGUIDADE < 5) THEN
+           MOVE 800 TO SALARIO-BASE
+       END-IF.
+
+       IF (ANTIGUIDADE >= 5 AND ANTIGUIDADE <= 10) THEN
+           MOVE 1000 TO SALARIO-BASE
+       END-IF.
+
+       IF (ANTIGUIDADE > 10) THEN
+           MOVE 1200 TO SALARIO-BASE
+       END-IF.
+
+       CALCULOS.
+
+       IF (MES-CALCULO = 6 OR 12) THEN
+           COMPUTE SALARIO-BASE = SALARIO-BASE * 2
+       END-IF.
+
+       COMPUTE TOTAL-COMISSAO = VOLUME-VENDAS * COMISSAO-PORCENTAGEM.
+       COMPUTE TOTAL-BASE-COMISSAO = SALARIO-BASE + TOTAL-COMISSAO.
+       COMPUTE TOTAL-SEG-SOCIAL = TOTAL-BASE-COMISSAO * TAXA-SEG-SOCIAL.
+       COMPUTE TOTAL-IRS = TOTAL-BASE-COMISSAO * TAXA-IRS.
+       COMPUTE TOTAL-DESCONTOS = TOTAL-IRS + TOTAL-SEG-SOCIAL.
+       COMPUTE SALARIO-LIQUIDO = TOTAL-BASE-COMISSAO - TOTAL-DESCONTOS.
+
+       MOSTRA-CALCULOS.
+       DISPLAY CLS.
+       DISPLAY "-------- CALCULA SALARIO --------" AT 0101.
+
+       MOVE ANTIGUIDADE TO SAIDA-INTEIRO.
+       DISPLAY FUNCTION CONCATENATE ("Anos de casa", SAIDA-INTEIRO)
+        AT 0301.
+
+       EVALUATE MES-CALCULO
+           WHEN 1
+               DISPLAY "Mes: 1 - Janeiro" AT 0401
+           WHEN 2
+               DISPLAY "Mes: 2 - Fevereiro" AT 0401
+           WHEN 3
+               DISPLAY "Mes: 3 - Março" AT 0401
+           WHEN 4
+               DISPLAY "Mes: 4 - Abril" AT 0401
+           WHEN 5
+               DISPLAY "Mes: 5 - Maio" AT 0401
+           WHEN 6
+               DISPLAY "Mes: 6 - Junho" AT 0401
+           WHEN 7
+               DISPLAY "Mes: 7 - Julho" AT 0401
+           WHEN 8
+               DISPLAY "Mes: 8 - Agosto" AT 0401
+           WHEN 9
+               DISPLAY "Mes: 9 - Setembro" AT 0401
+           WHEN 10
+               DISPLAY "Mes: 10 - Outubro" AT 0401
+           WHEN 11
+               DISPLAY "Mes: 11 - Novembro" AT 0401
+           WHEN 12
+               DISPLAY "Mes: 12 - Dezembro" AT 0401
+       END-EVALUATE.
+           
+       MOVE VOLUME-VENDAS TO SAIDA.
+       DISPLAY FUNCTION CONCATENATE ("Volume de Vendas: ", SAIDA)
+        AT 0501.
+
+       MOVE TOTAL-COMISSAO TO SAIDA.
+       DISPLAY FUNCTION CONCATENATE ("Valor Comissao: ", SAIDA) AT 0601.
+
+       MOVE TOTAL-BASE-COMISSAO TO SAIDA.
+       DISPLAY FUNCTION CONCATENATE ("Valor (Comissao+Base): ", SAIDA)
+        AT 0701.
+
+       MOVE TOTAL-SEG-SOCIAL TO SAIDA.
+       DISPLAY FUNCTION CONCATENATE ("Seguranca Social: ", SAIDA)
+        AT 0801.
+
+       MOVE TOTAL-IRS TO SAIDA.
+       DISPLAY FUNCTION CONCATENATE ("IRS: ", SAIDA)
+        AT 0901.
+
+       MOVE TOTAL-DESCONTOS TO SAIDA.
+       DISPLAY FUNCTION CONCATENATE ("Total Descontos(S.S+IRS): ",
+        SAIDA) AT 1001.
+
+       MOVE SALARIO-LIQUIDO TO SAIDA.
+       DISPLAY FUNCTION CONCATENATE ("Salario Liquido ", SAIDA) AT 1101.
+
+        DISPLAY "PRETENDE REPETIR? (S/N):" AT 1301.
+       ACCEPT REPETIR AT 1326.
+       IF(REPETIR="S" OR REPETIR="s") THEN
+           DISPLAY CLS
+           GO INICIO
+       ELSE
+           DISPLAY "OBRIGADO. VOLTE SEMPRE" AT 1501
+           ACCEPT OMITTED AT 1601
+       END-IF.
+           STOP RUN.

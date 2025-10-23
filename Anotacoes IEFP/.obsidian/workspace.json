@@ -11,14 +11,12 @@
             "id": "d84b565994eeefee",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "COBOL/UFCD-807/1. Introdução.md",
-                "mode": "source",
-                "source": true
+                "file": "COBOL/GnuCOBOL 3.2 - Programmer's Guide.pdf"
               },
-              "icon": "lucide-file",
-              "title": "1. Introdução"
+              "icon": "lucide-file-text",
+              "title": "GnuCOBOL 3.2 - Programmer's Guide"
             }
           }
         ]
@@ -78,7 +76,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "dc47af25f7a559c6",
@@ -171,8 +170,8 @@
   },
   "active": "d84b565994eeefee",
   "lastOpenFiles": [
-    "COBOL/UFCD-807/Estrutura Básica de um programa em COBOL.md",
     "COBOL/UFCD-807/1. Introdução.md",
+    "COBOL/UFCD-807/Estrutura Básica de um programa em COBOL.md",
     "C/UFCD-809/1. Introdução.md",
     "C/The GNU C Library Reference Manual.pdf",
     "C/The GNU C Programming Tutorial.pdf",

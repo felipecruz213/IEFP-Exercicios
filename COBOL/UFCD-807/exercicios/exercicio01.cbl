@@ -1,0 +1,143 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. exercicio01.
+       AUTHOR. .
+       INSTALLATION.  where.
+       DATE-WRITTEN.  22/10/2025.
+       DATE-COMPILED. 22/10/2025.
+       SECURITY.
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+       SOURCE-COMPUTER. pc.
+       OBJECT-COMPUTER. pc.
+       SPECIAL-NAMES.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+       DATA DIVISION.
+        FILE SECTION.
+        WORKING-STORAGE SECTION.
+       77 TIPOCARRO                PIC 9(2).
+           88 VALIDAR-TIPOCARRO VALUES 1 THRU 3.
+
+       77 DIAS                     PIC 9(3).
+       77 VALORDIAS                PIC 9(5)V99.
+
+       77 QUILOMETROS              PIC 9(5).
+       77 QUILOMETROS-TEMP         PIC 9(5).
+       77 VALOR-QUILOMETROS        PIC 9(8)V99.
+       77 IVA                      PIC 9(7)V99.
+       77 TOTALILIQUIDO            PIC 9(6)V99.
+       77 TOTALFINAL               PIC 9(6)V99.
+
+
+       77 SAIDA                    PIC Z,ZZZ,ZZ9.99.
+       77 SAIDA-INTEIRO            PIC ZZZZZZZZZZZZ.
+       77 TEMP                     PIC X(3).
+       77 TEMP-QUILOMETROS         PIC X(5).
+
+       77 REPETIR                  PIC A.
+
+       SCREEN SECTION.
+       01 CLS BLANK SCREEN.
+
+       PROCEDURE DIVISION.
+       INICIO.
+       DISPLAY "----------------ALUGA CARROS-------------" AT 0101.
+       DISPLAY "Tipo de Carro: (1-Volks, 2-Toyota, 3-Mercedes):" AT 0201.
+       ACCEPT TEMP AT 0249.
+       MOVE TEMP TO TIPOCARRO.
+
+       IF (NOT VALIDAR-TIPOCARRO) THEN
+           DISPLAY "TEM QUE INSERIR UM CARRO VALIDO !!!!!!" AT 0301
+           ACCEPT OMITTED AT 0301
+           DISPLAY CLS
+           GO INICIO
+       END-IF.
+
+       DISPLAY "Insira a Quilometragem:" AT 0401.
+       ACCEPT TEMP-QUILOMETROS AT 0425.
+       MOVE TEMP-QUILOMETROS TO QUILOMETROS.
+
+       DISPLAY "Insira a Quantidade de Dias:" AT 0601.
+       ACCEPT TEMP AT 0630.
+       MOVE TEMP TO DIAS.
+       
+       CALCULAR-QUILOMETRO.
+       IF (QUILOMETROS > 75) THEN
+           COMPUTE QUILOMETROS-TEMP = QUILOMETROS - 75
+       ELSE
+           COMPUTE QUILOMETROS-TEMP = QUILOMETROS
+       END-IF.
+
+       EVALUATE TIPOCARRO
+       WHEN 1
+           COMPUTE VALOR-QUILOMETROS = QUILOMETROS-TEMP * 1.20
+
+       WHEN 2
+           COMPUTE VALOR-QUILOMETROS = QUILOMETROS-TEMP * 1.50
+
+       WHEN 3
+           COMPUTE VALOR-QUILOMETROS = QUILOMETROS-TEMP * 2.50
+       END-EVALUATE.
+
+       CALCULAR-DIAS.
+
+       EVALUATE TIPOCARRO
+       WHEN 1
+           COMPUTE VALORDIAS = DIAS * 30
+
+       WHEN 2
+           COMPUTE VALORDIAS = DIAS * 35
+
+       WHEN 3
+           COMPUTE VALORDIAS = DIAS * 60
+       END-EVALUATE.
+
+       CALCULA-TOTAIS.
+       COMPUTE TOTALILIQUIDO = VALOR-QUILOMETROS + VALORDIAS.
+       COMPUTE IVA = TOTALILIQUIDO * 0.23.
+       COMPUTE TOTALFINAL = IVA + TOTALILIQUIDO.
+
+       EXIBE-TOTAIS.
+       DISPLAY CLS.
+       DISPLAY "----------------ALUGA CARROS-------------" AT 0101.
+
+       EVALUATE TIPOCARRO
+        WHEN 1
+           DISPLAY "Tipo de Carro: 1-Volkswagen" AT 0301
+
+        WHEN 2
+           DISPLAY "Tipo de Carro: 2-Toyota" AT 0301
+
+        WHEN 3
+           DISPLAY "Tipo de Carro: 3-Mercedes" AT 0301 
+
+       END-EVALUATE.
+       
+       MOVE QUILOMETROS TO SAIDA-INTEIRO.
+       DISPLAY FUNCTION CONCATENATE("Kms Efetuados: ", SAIDA-INTEIRO) 
+       AT 0401.
+
+       MOVE DIAS TO SAIDA-INTEIRO
+       DISPLAY FUNCTION CONCATENATE("Dias de Aluger: ", SAIDA-INTEIRO)
+       AT 0501.
+
+       MOVE TOTALILIQUIDO TO SAIDA.
+       DISPLAY FUNCTION CONCATENATE("Total Iliquido: ", SAIDA)
+       AT 0601.
+
+       MOVE IVA TO SAIDA.
+       DISPLAY FUNCTION CONCATENATE("IVA(23%): ", SAIDA) AT 0701.
+
+       MOVE TOTALFINAL TO SAIDA.
+       DISPLAY FUNCTION CONCATENATE("Total Final: ", SAIDA) AT 0801.
+
+       DISPLAY "PRETENDE CONTINUAR (S/N):" AT 1301.
+       ACCEPT REPETIR AT 1326.
+       IF(REPETIR="S" OR REPETIR="s") THEN
+           DISPLAY CLS
+           GO INICIO
+       ELSE
+           DISPLAY "OBRIGADO. VOLTE SEMPRE" AT 1501
+           ACCEPT OMITTED AT 1601
+       END-IF.
+           STOP RUN.

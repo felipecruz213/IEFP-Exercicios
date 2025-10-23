@@ -26,7 +26,7 @@ int main(){
             valorMenor = a;
         }
         
-        for(int i = valorMenor; i < valorMaior +1; i++){
+        for(int i = valorMenor; i <= valorMaior; i++){
             printf("%d ", i);
         }
     }
