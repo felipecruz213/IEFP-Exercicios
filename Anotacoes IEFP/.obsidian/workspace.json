@@ -76,8 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "dc47af25f7a559c6",
@@ -168,8 +167,10 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "d84b565994eeefee",
+  "active": "b1ead0f546496346",
   "lastOpenFiles": [
+    "Sem título 1",
+    "Sem título",
     "COBOL/UFCD-807/1. Introdução.md",
     "COBOL/UFCD-807/Estrutura Básica de um programa em COBOL.md",
     "C/UFCD-809/1. Introdução.md",
@@ -184,7 +185,6 @@
     "SQL/UFCD-10788",
     "SQL",
     "Sem título.base",
-    "COBOL/UFCD-807",
-    "COBOL"
+    "COBOL/UFCD-807"
   ]
 }
