@@ -87,5 +87,6 @@ int main(){
 
     printf("\nA media da escola é: %f", mediaturma);
 
+    return 0;
 
 }
