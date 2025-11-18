@@ -18,8 +18,21 @@
               "icon": "lucide-file-text",
               "title": "GnuCOBOL 3.2 - Programmer's Guide"
             }
+          },
+          {
+            "id": "422cc6a19e050347",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.10.3"
+              },
+              "icon": "lucide-book-up",
+              "title": "Notas de Lançamento 1.10.3"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -167,16 +180,16 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "b1ead0f546496346",
+  "active": "422cc6a19e050347",
   "lastOpenFiles": [
+    "C/The GNU C Programming Tutorial.pdf",
+    "C/UFCD-809/1. Introdução.md",
+    "COBOL/UFCD-807/1. Introdução.md",
+    "COBOL/GnuCOBOL 3.2 - Programmer's Guide.pdf",
     "Sem título 1",
     "Sem título",
-    "COBOL/UFCD-807/1. Introdução.md",
     "COBOL/UFCD-807/Estrutura Básica de um programa em COBOL.md",
-    "C/UFCD-809/1. Introdução.md",
     "C/The GNU C Library Reference Manual.pdf",
-    "C/The GNU C Programming Tutorial.pdf",
-    "COBOL/GnuCOBOL 3.2 - Programmer's Guide.pdf",
     "C/UFCD-809",
     "C",
     "Bem-vindo.md",
@@ -184,7 +197,6 @@
     "SQL/Sem título.md",
     "SQL/UFCD-10788",
     "SQL",
-    "Sem título.base",
-    "COBOL/UFCD-807"
+    "Sem título.base"
   ]
 }
