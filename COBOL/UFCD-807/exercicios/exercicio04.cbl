@@ -19,6 +19,10 @@
        77 TEMP-NOME                PIC X(20).
       *77 TEMP-TELEFONE            PIC ZZZ-ZZZ.
 
+       01 TABELAS.
+           05 TAB-INGREDIENTES  PIC X(10)   OCCURS 10.
+           05 TAB-PRECOS        PIC 9V99    OCCURS 10.
+              
       *INFORMAÇÕES DO CLIENTE  
        77 NOME-CLIENTE             PIC X(20).
        77 TELEFONE-CLIENTE         PIC 9(6).
@@ -43,9 +47,9 @@
        77 VALOR-FINAL              PIC 9(4)V99.
        77 SAIDA-VALORES            PIC ZZ,ZZ9.99.
        77 VALOR-INGREDIENTES       PIC 9(4)V99.
-       77 SAIDA-INGREDIENTES       PIC Z,ZZ9.99.
+       77 SAIDA-PRECO       PIC 9.99.
 
-
+       77 LINHA                 PIC 99 VALUE 16.
        
       * VARIAVEIS RESERVADAS PARA A HORA E DATA DO SISTEMA 
        01 DATA-SISTEMA.
@@ -58,6 +62,28 @@
            05 MINUTOS-SISTEMA      PIC 9(2).
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
+
+       CARREGA-TABELAS.
+           MOVE "FIAMBRE"       TO TAB-INGREDIENTES(1).
+           MOVE 0.50            TO TAB-PRECOS(1).
+           MOVE "ATUM   "       TO TAB-INGREDIENTES(2).
+           MOVE 0.70            TO TAB-PRECOS(2).
+           MOVE "ANCHOVAS"      TO TAB-INGREDIENTES(3).
+           MOVE 0.40            TO TAB-PRECOS(3).
+           MOVE "CAMARAO"       TO TAB-INGREDIENTES(4).
+           MOVE 0.80            TO TAB-PRECOS(4).
+           MOVE "BACON"         TO TAB-INGREDIENTES(5).
+           MOVE 0.90            TO TAB-PRECOS(5).
+           MOVE "BANANA"        TO TAB-INGREDIENTES(6).
+           MOVE 0.30            TO TAB-PRECOS(6).
+           MOVE "ANANAS"        TO TAB-INGREDIENTES(7).
+           MOVE 0.40            TO TAB-PRECOS(7).
+           MOVE "AZEITONAS"     TO TAB-INGREDIENTES(8).
+           MOVE 0.30            TO TAB-PRECOS(8).
+           MOVE "COGUMELOS"     TO TAB-INGREDIENTES(9).
+           MOVE 0.60            TO TAB-PRECOS(9).
+           MOVE "MILHO"         TO TAB-INGREDIENTES(10).
+           MOVE 0.50            TO TAB-PRECOS(10).
 
       * DEFINE A DATA E HORA DE ACORDO COM 
       * O SISTEMA E PASSA PARA AS RESPECTIVAS VARIAVEIS
@@ -120,16 +146,21 @@
                        WHEN 1
                            DISPLAY  "PEQUENA                     " 
                            AT 0930
+                           DISPLAY "1-PEQUENA" AT 2449
+                           ADD 3.0 TO VALOR-PAGAR
                        WHEN 2
                            DISPLAY  "MEDIA                       "
                            AT 0930                                   
+                           DISPLAY "2-MEDIA" AT 2449
+                           ADD 4.0 TO VALOR-PAGAR
                        WHEN 3
-                            DISPLAY "GRANDE                      "
+                           DISPLAY "GRANDE                      "
                            AT 0930
+                           DISPLAY "3-GRANDE" AT 2449
+                           ADD 5.0 TO VALOR-PAGAR
                END-IF
        END-PERFORM.
        
-       MOVE 16 TO CONTADOR-INGREDIENTES.
        PERFORM UNTIL VALIDAR-INGREDIENTES
            ACCEPT QUANTIDADE-INGREDIENTES AT 1117
            IF (NOT VALIDAR-INGREDIENTES)
@@ -140,134 +171,42 @@
        END-PERFORM.
 
        ENTRADA-INGREDIENTES.
-       IF(CONTADOR-INGREDIENTES >= QUANTIDADE-INGREDIENTES + 16)
-           GO TO FIM-ENTRADA-INGREDIENTES
-       END-IF.
-           
-       ACCEPT ID-INGREDIENTE AT COLUMN 02 LINE CONTADOR-INGREDIENTES
-       IF (NOT VALIDAR-ID-INGREDIENTE)
-           DISPLAY "INSIRA UM INGREDIENTE VALIDO" 
-           AT COLUMN 14 LINE CONTADOR-INGREDIENTES
-           GO TO ENTRADA-INGREDIENTES
-       ELSE
-           
-           EVALUATE ID-INGREDIENTE
-               WHEN 1
-                   MOVE 0.5 TO VALOR-INGREDIENTES
-                   DISPLAY "Fiambre                     " 
-                   AT COLUMN 14 LINE CONTADOR-INGREDIENTES 
-                   DISPLAY VALOR-INGREDIENTES 
-                   AT COLUMN 45 LINE CONTADOR-INGREDIENTES
-                   ADD VALOR-INGREDIENTES TO VALOR-INGREDIENTES
-                   ADD 1 TO CONTADOR-INGREDIENTES
-                   MOVE VALOR-INGREDIENTES TO SAIDA-VALORES
-                   DISPLAY SAIDA-VALORES AT 2349
-                   GO TO ENTRADA-INGREDIENTES
-               WHEN 2
-                   MOVE 0.7 TO VALOR-INGREDIENTES
-                   DISPLAY "Atum                        " 
-                   AT COLUMN 14 LINE CONTADOR-INGREDIENTES 
-                   DISPLAY VALOR-INGREDIENTES 
-                   AT COLUMN 45 LINE CONTADOR-INGREDIENTES
-                   ADD VALOR-INGREDIENTES TO VALOR-INGREDIENTES
-                   MOVE VALOR-INGREDIENTES TO SAIDA-VALORES
-                   DISPLAY SAIDA-VALORES AT 2349
-                   ADD 1 TO CONTADOR-INGREDIENTES
-                   GO TO ENTRADA-INGREDIENTES
-               WHEN 3
-                   MOVE 0.4 TO VALOR-INGREDIENTES
-                   DISPLAY "Anchovas                    " 
-                   AT COLUMN 14 LINE CONTADOR-INGREDIENTES 
-                   DISPLAY VALOR-INGREDIENTES 
-                   AT COLUMN 45 LINE CONTADOR-INGREDIENTES
-                   ADD VALOR-INGREDIENTES TO VALOR-INGREDIENTES
-                   MOVE VALOR-INGREDIENTES TO SAIDA-VALORES
-                   DISPLAY SAIDA-VALORES AT 2349
-                   ADD 1 TO CONTADOR-INGREDIENTES
-                   GO TO ENTRADA-INGREDIENTES
-               WHEN 4
-                   MOVE 0.8 TO VALOR-INGREDIENTES
-                   DISPLAY "Camarao                     " 
-                   AT COLUMN 14 LINE CONTADOR-INGREDIENTES 
-                   DISPLAY VALOR-INGREDIENTES 
-                   AT COLUMN 45 LINE CONTADOR-INGREDIENTES
-                   ADD VALOR-INGREDIENTES TO VALOR-INGREDIENTES
-                   MOVE VALOR-INGREDIENTES TO SAIDA-VALORES
-                   DISPLAY SAIDA-VALORES AT 2349
-                   ADD 1 TO CONTADOR-INGREDIENTES
-                   GO TO ENTRADA-INGREDIENTES
-               WHEN 5
-                   MOVE 0.9 TO VALOR-INGREDIENTES
-                   DISPLAY "Bacon                       " 
-                   AT COLUMN 14 LINE CONTADOR-INGREDIENTES 
-                   DISPLAY VALOR-INGREDIENTES 
-                   AT COLUMN 45 LINE CONTADOR-INGREDIENTES
-                   ADD VALOR-INGREDIENTES TO VALOR-INGREDIENTES
-                   MOVE VALOR-INGREDIENTES TO SAIDA-VALORES
-                   DISPLAY SAIDA-VALORES AT 2349
-                   ADD 1 TO CONTADOR-INGREDIENTES
-                   GO TO ENTRADA-INGREDIENTES
-               WHEN 6
-                   MOVE 0.3 TO VALOR-INGREDIENTES
-                   DISPLAY "Banana                      "
-                   AT COLUMN 14 LINE CONTADOR-INGREDIENTES 
-                   DISPLAY VALOR-INGREDIENTES 
-                   AT COLUMN 45 LINE CONTADOR-INGREDIENTES
-                   ADD VALOR-INGREDIENTES TO VALOR-INGREDIENTES
-                   ADD 1 TO CONTADOR-INGREDIENTES
-                   MOVE VALOR-INGREDIENTES TO SAIDA-VALORES
-                   DISPLAY SAIDA-VALORES AT 2349
-                   GO TO ENTRADA-INGREDIENTES
-               WHEN 7
-                   MOVE 0.4 TO VALOR-INGREDIENTES
-                   DISPLAY "Ananas                      "
-                   AT COLUMN 14 LINE CONTADOR-INGREDIENTES 
-                   DISPLAY VALOR-INGREDIENTES 
-                   AT COLUMN 45 LINE CONTADOR-INGREDIENTES
-                   ADD VALOR-INGREDIENTES TO VALOR-INGREDIENTES
-                   MOVE VALOR-INGREDIENTES TO SAIDA-VALORES
-                   DISPLAY SAIDA-VALORES AT 2349
-                   ADD 1 TO CONTADOR-INGREDIENTES
-                   GO TO ENTRADA-INGREDIENTES
-               WHEN 8
-                   MOVE 0.3 TO VALOR-INGREDIENTES
-                   DISPLAY "Azeitonas                   "
-                   AT COLUMN 14 LINE CONTADOR-INGREDIENTES 
-                   DISPLAY VALOR-INGREDIENTES 
-                   AT COLUMN 45 LINE CONTADOR-INGREDIENTES
-                   ADD VALOR-INGREDIENTES TO VALOR-INGREDIENTES
-                   MOVE VALOR-INGREDIENTES TO SAIDA-VALORES
-                   DISPLAY SAIDA-VALORES AT 2349
-                   ADD 1 TO CONTADOR-INGREDIENTES
-                   GO TO ENTRADA-INGREDIENTES
-               WHEN 9
-                   MOVE 0.6 TO VALOR-INGREDIENTES
-                   DISPLAY "Cogumelos                   "
-                   AT COLUMN 14 LINE CONTADOR-INGREDIENTES 
-                   DISPLAY VALOR-INGREDIENTES 
-                   AT COLUMN 45 LINE CONTADOR-INGREDIENTES
-                   ADD VALOR-INGREDIENTES TO VALOR-INGREDIENTES
-                   MOVE VALOR-INGREDIENTES TO SAIDA-VALORES
-                   DISPLAY SAIDA-VALORES AT 2349
-                   ADD 1 TO CONTADOR-INGREDIENTES
-                   GO TO ENTRADA-INGREDIENTES
-               WHEN 10
-                   MOVE 0.5 TO VALOR-INGREDIENTES
-                   DISPLAY "Milho                       "
-                   AT COLUMN 14 LINE CONTADOR-INGREDIENTES 
-                   DISPLAY VALOR-INGREDIENTES 
-                   AT COLUMN 45 LINE CONTADOR-INGREDIENTES
-                   ADD VALOR-INGREDIENTES TO VALOR-INGREDIENTES
-                   MOVE VALOR-INGREDIENTES TO SAIDA-VALORES
-                   DISPLAY SAIDA-VALORES AT 2349
-                   ADD 1 TO CONTADOR-INGREDIENTES
-                   GO TO ENTRADA-INGREDIENTES
-       END-IF.
+       PERFORM QUANTIDADE-INGREDIENTES TIMES
+           PERFORM WITH TEST AFTER UNTIL VALIDAR-ID-INGREDIENTE
+           ACCEPT ID-INGREDIENTE LINE LINHA COL 3
+             IF (NOT VALIDAR-ID-INGREDIENTE)
+                 DISPLAY "INSIRA UM INGREDIENTE VALIDO!"
+                 LINE LINHA COL 24
+             ELSE
+                  DISPLAY "                                "
+                  LINE LINHA COL 24
+                  DISPLAY TAB-INGREDIENTES(ID-INGREDIENTE) LINE LINHA
+                  COL 24
+                  MOVE TAB-PRECOS(ID-INGREDIENTE) TO SAIDA-PRECO
+                  DISPLAY SAIDA-PRECO LINE LINHA COL 50
+             END-IF
+           END-PERFORM
+           ADD 1 TO LINHA
+           ADD TAB-PRECOS(ID-INGREDIENTE) TO TOTAL-INGREDIENTES
+           ADD TOTAL-INGREDIENTES TO VALOR-PAGAR
 
-       FIM-ENTRADA-INGREDIENTES.
+           MOVE TOTAL-INGREDIENTES TO SAIDA-VALORES
+           DISPLAY SAIDA-VALORES AT 2349
+
+           MOVE VALOR-PAGAR TO SAIDA-VALORES
+           DISPLAY SAIDA-VALORES AT 2549
+           
+
+           COMPUTE IVA = VALOR-PAGAR * 0.23
+           MOVE IVA TO SAIDA-VALORES
+           DISPLAY SAIDA-VALORES AT 2649
+       END-PERFORM.
        
        ACCEPT OMITTED AT 2020.
 
+       COMPUTE VALOR-FINAL = IVA + VALOR-PAGAR.
+       MOVE VALOR-FINAL TO SAIDA-VALORES.
+       DISPLAY SAIDA-VALORES AT 2749.
 
              
              STOP RUN.
