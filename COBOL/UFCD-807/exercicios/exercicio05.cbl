@@ -30,7 +30,8 @@
        SCREEN SECTION.
        01 LAYOUT.
            05 COL 01 LINE 01 "EMPRESA DOS BIFES".
-
+           
+           05 COL 25 LINE 3 "Digite o N do menu: ".
            05 COL 01 LINE 4 "N".
            05 COL 03 LINE 4 "MENU".
 
@@ -57,7 +58,7 @@
        MOVE 1 TO CONTADOR.
        PERFORM 7 TIMES
            IF (NOT (CONTADOR = 7))
-               DISPLAY FUNCTION concatenate
+               DISPLAY FUNCTION CONCATENATE
                (CONTADOR," ", NOME-LANCHE(CONTADOR))
                AT COL 01 LINE LINHA
                MOVE PRECO-LANCHE(CONTADOR) TO SAIDA-PRECO
@@ -68,8 +69,11 @@
                DISPLAY "0  SAIR" AT COL 01 LINE LINHA
        END-PERFORM.
 
+       
+
        PERFORM WITH TEST AFTER UNTIL (ESCOLHA-LANCHE = 0)
-           ACCEPT ESCOLHA-LANCHE 
+           ACCEPT ESCOLHA-LANCHE AT COL 45 LINE 3
+           
        END-PERFORM.
        
              ACCEPT OMITTED AT 2001.

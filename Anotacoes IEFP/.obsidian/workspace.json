@@ -4,47 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "07065cea85a11e72",
+        "id": "5b0d7b5122225d5d",
         "type": "tabs",
         "children": [
           {
-            "id": "d84b565994eeefee",
+            "id": "fc1f8bebd0f7e446",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "COBOL/GnuCOBOL 3.2 - Programmer's Guide.pdf"
+                "file": "Livros/Cobol_Programmers.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "GnuCOBOL 3.2 - Programmer's Guide"
-            }
-          },
-          {
-            "id": "422cc6a19e050347",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.10.3"
-              },
-              "icon": "lucide-book-up",
-              "title": "Notas de Lançamento 1.10.3"
-            }
-          },
-          {
-            "id": "3b3e7b2f851c5f3b",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.10.6"
-              },
-              "icon": "lucide-book-up",
-              "title": "Notas de Lançamento 1.10.6"
+              "title": "Cobol_Programmers"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -194,12 +169,12 @@
   },
   "active": "b1ead0f546496346",
   "lastOpenFiles": [
+    "C/The GNU C Programming Tutorial.pdf",
+    "COBOL/GnuCOBOL 3.2 - Programmer's Guide.pdf",
     "Livros",
     "Livros/Cobol_Programmers.pdf",
-    "C/The GNU C Programming Tutorial.pdf",
     "C/UFCD-809/1. Introdução.md",
     "COBOL/UFCD-807/1. Introdução.md",
-    "COBOL/GnuCOBOL 3.2 - Programmer's Guide.pdf",
     "Sem título 1",
     "COBOL/UFCD-807/Estrutura Básica de um programa em COBOL.md",
     "C/The GNU C Library Reference Manual.pdf",
