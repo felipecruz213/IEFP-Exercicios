@@ -29,7 +29,7 @@ void calcularImposto(int vencimentoIliquido){
     }
 
     if (pagaImposto){
-    valorImposto = vencimentoIliquido * imposto;
+        valorImposto = vencimentoIliquido * imposto;
     }
     printf("O valor do imposto é : %d", valorImposto);
 }

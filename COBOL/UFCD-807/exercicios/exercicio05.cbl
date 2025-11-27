@@ -16,8 +16,10 @@
        77 ID-PEDIDO                PIC 9(1).
        77 TOTAL-PEDIDO             PIC 9(6)V99.
        77 SAIDA-PRECO              PIC 9.99.
+       77 SAIDA-TOTAL              PIC Z,ZZ9.99.
 
        77 ESCOLHA-LANCHE           PIC 9(1) VALUE 1.
+           88 VALIDAR-ESCOLHA-LANCHE VALUES 1 THRU 6.
 
        01 PRODUTOS.
            05 NOME-LANCHE          PIC X(20)       OCCURS 6.
@@ -29,7 +31,7 @@
        
        SCREEN SECTION.
        01 LAYOUT.
-           05 COL 01 LINE 01 "EMPRESA DOS BIFES".
+           05 COL 01 LINE 01 "hAMBURGERIA DOS HAMBURGER".
            
            05 COL 25 LINE 3 "Digite o N do menu: ".
            05 COL 01 LINE 4 "N".
@@ -69,12 +71,32 @@
                DISPLAY "0  SAIR" AT COL 01 LINE LINHA
        END-PERFORM.
 
-       
 
+       MOVE 1 TO CONTADOR.
+       MOVE 5 TO LINHA.
        PERFORM WITH TEST AFTER UNTIL (ESCOLHA-LANCHE = 0)
+           PERFORM WITH TEST AFTER UNTIL
+           (VALIDAR-ESCOLHA-LANCHE OR ESCOLHA-LANCHE = 0)
+
            ACCEPT ESCOLHA-LANCHE AT COL 45 LINE 3
-           
+           IF (VALIDAR-ESCOLHA-LANCHE)
+              DISPLAY NOME-LANCHE(ESCOLHA-LANCHE) AT COL 30 LINE LINHA
+              MOVE PRECO-LANCHE(ESCOLHA-LANCHE) TO SAIDA-PRECO
+              DISPLAY SAIDA-PRECO AT COL 50 LINE LINHA
+              ADD PRECO-LANCHE(ESCOLHA-LANCHE) TO TOTAL-PEDIDO
+              MOVE TOTAL-PEDIDO TO SAIDA-TOTAL
+              DISPLAY FUNCTION concatenate("Total: ",SAIDA-TOTAL)
+              AT COL 05 LINE 25
+              ADD 1 TO LINHA
+              ADD 1 TO CONTADOR
+           ELSE
+               IF(ESCOLHA-LANCHE > 0)
+                   DISPLAY "Invalido" AT COL 30 LINE LINHA
+               END-IF
+           END-IF
+           END-PERFORM
+
        END-PERFORM.
-       
+           
              ACCEPT OMITTED AT 2001.
              STOP RUN.
