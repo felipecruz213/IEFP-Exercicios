@@ -46,12 +46,19 @@ void introduzirNumeros(){
                 if (numEntrada >= 1 && numEntrada <=50)
                 {
                     numeroValido = true;
-                    numerosEntrada[i] = numEntrada;
                 }
                 else{
                     printf("\nINSIRA UM NUMERO VALIDOOOOOOO!!!!!!");
                     numeroValido = false;
                 }
+                for(int x = 0; x <= i; ++x){
+                    if(numerosEntrada[x] == numEntrada){
+                        printf("\nNao pode inserir numeros repetidos!!!!!");
+                        numeroValido = false;
+                    }
+                }
+                if(numeroValido){numerosEntrada[i] = numEntrada;}
+                
             }while(!numeroValido);
         }
     //Ordena a Array com os numeros da entrada    
