@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "jCkmuzlB2lA=",
+  "success": true,
+  "projectFilePath": "/home/felipe/IEFP/C#/UFCD-3935/ConsoleApp1/ConsoleApp1.csproj",
+  "expectedPackageFiles": [
+    "/home/felipe/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.11/microsoft.aspnetcore.app.ref.9.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}

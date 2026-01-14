@@ -1,0 +1,15 @@
+/home/felipe/IEFP/C#/UFCD-3935/IMC/bin/Debug/net9.0/IMC
+/home/felipe/IEFP/C#/UFCD-3935/IMC/bin/Debug/net9.0/IMC.deps.json
+/home/felipe/IEFP/C#/UFCD-3935/IMC/bin/Debug/net9.0/IMC.runtimeconfig.json
+/home/felipe/IEFP/C#/UFCD-3935/IMC/bin/Debug/net9.0/IMC.dll
+/home/felipe/IEFP/C#/UFCD-3935/IMC/bin/Debug/net9.0/IMC.pdb
+/home/felipe/IEFP/C#/UFCD-3935/IMC/obj/Debug/net9.0/IMC.GeneratedMSBuildEditorConfig.editorconfig
+/home/felipe/IEFP/C#/UFCD-3935/IMC/obj/Debug/net9.0/IMC.AssemblyInfoInputs.cache
+/home/felipe/IEFP/C#/UFCD-3935/IMC/obj/Debug/net9.0/IMC.AssemblyInfo.cs
+/home/felipe/IEFP/C#/UFCD-3935/IMC/obj/Debug/net9.0/IMC.csproj.CoreCompileInputs.cache
+/home/felipe/IEFP/C#/UFCD-3935/IMC/obj/Debug/net9.0/IMC.sourcelink.json
+/home/felipe/IEFP/C#/UFCD-3935/IMC/obj/Debug/net9.0/IMC.dll
+/home/felipe/IEFP/C#/UFCD-3935/IMC/obj/Debug/net9.0/refint/IMC.dll
+/home/felipe/IEFP/C#/UFCD-3935/IMC/obj/Debug/net9.0/IMC.pdb
+/home/felipe/IEFP/C#/UFCD-3935/IMC/obj/Debug/net9.0/IMC.genruntimeconfig.cache
+/home/felipe/IEFP/C#/UFCD-3935/IMC/obj/Debug/net9.0/ref/IMC.dll

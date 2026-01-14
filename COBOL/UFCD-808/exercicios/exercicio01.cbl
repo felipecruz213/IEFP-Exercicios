@@ -1,0 +1,24 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. exercicio01.
+       AUTHOR.
+       SECURITY.
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+       SPECIAL-NAMES.
+       FILE-CONTROL.
+       DATA DIVISION.
+        FILE SECTION.
+        WORKING-STORAGE SECTION.
+       77 ESCOLHA-MENU                                 PIC 9.
+           88 VALIDAR-ESCOLHA-MENU VALUES 1 THRU 9.
+
+       
+       SCREEN SECTION.
+       01 CLS BLANK SCREEN.
+       01 LAYOUT-MENU.
+       
+       PROCEDURE DIVISION.
+       DISPLAY LAYOUT-MENU.
+       
+       ACCEPT OMMITED AT 0060.
+             STOP RUN.

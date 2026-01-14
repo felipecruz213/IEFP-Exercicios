@@ -13,10 +13,10 @@
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Livros/Cobol_Programmers.pdf"
+                "file": "Livros/Clean Code.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Cobol_Programmers"
+              "title": "Clean Code"
             }
           }
         ]
@@ -167,12 +167,14 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "b1ead0f546496346",
+  "active": "fc1f8bebd0f7e446",
   "lastOpenFiles": [
+    "Livros/Cobol_Programmers.pdf",
+    "Livros/Clean Code.pdf",
+    "Sem título.md",
     "C/The GNU C Programming Tutorial.pdf",
     "COBOL/GnuCOBOL 3.2 - Programmer's Guide.pdf",
     "Livros",
-    "Livros/Cobol_Programmers.pdf",
     "C/UFCD-809/1. Introdução.md",
     "COBOL/UFCD-807/1. Introdução.md",
     "Sem título 1",
@@ -181,10 +183,7 @@
     "C/UFCD-809",
     "C",
     "Bem-vindo.md",
-    "Sem título.md",
     "SQL/Sem título.md",
-    "SQL/UFCD-10788",
-    "SQL",
-    "Sem título.base"
+    "SQL/UFCD-10788"
   ]
 }

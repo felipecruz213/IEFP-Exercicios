@@ -80,7 +80,7 @@ void introduzirNumeros(){
                         numeroValido = false;
                     }
                 }
-
+                
                 if(numeroValido){numerosEntrada[i] = numEntrada;}
             }while(!numeroValido);
         }

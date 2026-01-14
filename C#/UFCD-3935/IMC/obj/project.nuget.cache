@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "jJY4ba8K6ls=",
+  "success": true,
+  "projectFilePath": "/home/felipe/IEFP/C#/UFCD-3935/IMC/IMC.csproj",
+  "expectedPackageFiles": [
+    "/home/felipe/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.11/microsoft.aspnetcore.app.ref.9.0.11.nupkg.sha512"
+  ],
+  "logs": []
+}
