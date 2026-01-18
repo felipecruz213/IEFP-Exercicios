@@ -1,8 +1,21 @@
 {
 	"folders": [
 		{
-			"path": "UFCD-807"
+			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"coboleditor.metadata_symbols": [
+			"prog02,main.cbl,1"
+		],
+		"coboleditor.metadata_entrypoints": [],
+		"coboleditor.metadata_types": [],
+		"coboleditor.metadata_files": [
+			"1759341982178,UFCD-807/main.cbl",
+			"1767719258870,UFCD-807/prog07_tabelas.cbl",
+			"1764266401364,UFCD-807/exercicios/exercicio05.cbl",
+			"1768486557483,UFCD-808/exercicios/exercicio01.cbl"
+		],
+		"coboleditor.metadata_knowncopybooks": []
+	}
 }

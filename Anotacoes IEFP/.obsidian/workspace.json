@@ -13,13 +13,26 @@
             "state": {
               "type": "pdf",
               "state": {
+                "file": "Livros/Cobol_Programmers.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Cobol_Programmers"
+            }
+          },
+          {
+            "id": "ca83451b461f4a27",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
                 "file": "Livros/Clean Code.pdf"
               },
               "icon": "lucide-file-text",
               "title": "Clean Code"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -158,6 +171,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "switcher:Abrir a troca rápida": false,
       "graph:Abrir visualização em gráfico": false,
       "canvas:Criar novo canvas": false,
@@ -167,7 +181,7 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "fc1f8bebd0f7e446",
+  "active": "ca83451b461f4a27",
   "lastOpenFiles": [
     "Livros/Cobol_Programmers.pdf",
     "Livros/Clean Code.pdf",
