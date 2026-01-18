@@ -23,6 +23,7 @@ Organizei os conteúdos por módulos (UFCDs), cobrindo as seguintes áreas:
 | **SQL (UFCD 10788)** | Modelagem de dados, criação de tabelas e consultas complexas (JOINs, Views, Subqueries). |
 | **C / C++** | Algoritmos de baixa abstração, gestão de memória e estruturas de dados. |
 | **COBOL** | Lógica de programação para sistemas transacionais e processamento de ficheiros. |
+| **JAVA** | Módulo futuro focado em Programação Orientada a Objetos e ecossistema Java. |
 | **Anotações** | Documentação e conceitos teóricos aprendidos em sala. |
 
 ---
@@ -38,11 +39,10 @@ Organizei os conteúdos por módulos (UFCDs), cobrindo as seguintes áreas:
 
 ## 📨 Contacto
 
-Estou em busca da minha primeira oportunidade como **Estagiário de Desenvolvimento**. Se você procura alguém dedicado, com facilidade de aprendizado e uma base técnica sólida, vamos conversar!
+Estou em busca da minha primeira oportunidade como **Estagiário**. Se você procura alguém dedicado, com facilidade de aprendizado e uma base técnica sólida, vamos conversar!
 
-- **LinkedIn:** [Seu Nome Aqui](LINK_DO_SEU_LINKEDIN)
+- **[LinkedIn]**(https://www.linkedin.com/in/felipe-cruz-0935aa29a/)
 - **E-mail:** [Seu e-mail aqui]
-- **Portfólio:** [Link para outro projeto ou apenas remova esta linha]
 
 ---
 *Estudos realizados no âmbito da formação profissional do IEFP - 2025/2026.*
