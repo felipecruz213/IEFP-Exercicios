@@ -16,6 +16,7 @@ def validarNumero(num_min, num_max, numero):
 def gerarNumeroAleatorio(num_min, num_max):
     random.seed() # inicializa a seed conforme a hora atual do sistema
     numero_gerado = random.randint(num_min, num_max)
+
     return numero_gerado
 
 def verificarNumeroProximo(a, b, proximidade):
