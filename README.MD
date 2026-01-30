@@ -38,7 +38,7 @@ Abaixo, os módulos que compõem minha formação, organizados por competência 
 
 Atualmente em busca de **Estágio Curricular ou Profissional** na área de desenvolvimento de software. Estou pronto para aprender novas stacks e contribuir com o time desde o primeiro dia.
 
-- **[Seu Nome Aqui]**(https://www.linkedin.com/in/felipe-cruz-0935aa29a/)
+- **Felipe Cruz**(https://www.linkedin.com/in/felipe-cruz-0935aa29a/)
 - **GitHub:** [felipecruz213](https://github.com/felipecruz213)
 
 ---
