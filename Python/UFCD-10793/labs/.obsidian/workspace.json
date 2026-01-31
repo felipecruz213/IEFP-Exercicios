@@ -1,34 +1,44 @@
 {
   "main": {
-    "id": "bf0491311db0e7f3",
+    "id": "824ebf6a3bfe64fa",
     "type": "split",
     "children": [
       {
-        "id": "5b0d7b5122225d5d",
+        "id": "8d7bb48e956d3bf2",
         "type": "tabs",
+        "dimension": 42.00426439232409,
         "children": [
           {
-            "id": "ca83451b461f4a27",
+            "id": "dcb07972b882c41b",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "Livros/Clean Code.pdf"
+                "file": "lab_13/Respostas.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Clean Code"
+              "icon": "lucide-file",
+              "title": "Respostas"
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "64b8a81953393d19",
+        "type": "tabs",
+        "dimension": 57.995735607675904,
+        "children": [
           {
-            "id": "9082d8924813fd0a",
+            "id": "1d8fc6792530908a",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "Livros/Cobol_Programmers.pdf"
+                "file": "pdf/Lab 1.3 - Controlo da Execucao - Parte I.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "Cobol_Programmers"
+              "title": "Lab 1.3 - Controlo da Execucao - Parte I"
             }
           }
         ]
@@ -37,15 +47,28 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "7889293ca01f5160",
+    "id": "29619193ffeaf506",
     "type": "split",
     "children": [
       {
-        "id": "8da28f3adedb8353",
+        "id": "1b6cf39353ef1338",
         "type": "tabs",
         "children": [
           {
-            "id": "bac0539bc5cb0f75",
+            "id": "4015b0c54cb74338",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
+          },
+          {
+            "id": "d2ef8324dec88615",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -62,7 +85,7 @@
             }
           },
           {
-            "id": "312f787e9594f4ef",
+            "id": "58c65df02939d05e",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -75,23 +98,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
-    "id": "dc47af25f7a559c6",
+    "id": "85e4807ff20fdd82",
     "type": "split",
     "children": [
       {
-        "id": "ce00be09745de606",
+        "id": "7f5084b77c0ffa15",
         "type": "tabs",
         "children": [
           {
-            "id": "0ca376b0e24c260f",
+            "id": "4db73ae5f1335e82",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "COBOL/UFCD-807/1. Introdução.md",
+                "file": "lab_13/Respostas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,25 +124,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Links inversos para 1. Introdução"
+              "title": "Links inversos para Respostas"
             }
           },
           {
-            "id": "48e9bf30a340af37",
+            "id": "41b9c1d60b08b85d",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Bem-vindo.md",
+                "file": "lab_13/Respostas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Links de saída para Bem-vindo"
+              "title": "Links de saída para Respostas"
             }
           },
           {
-            "id": "3e41873a2a9d6cd0",
+            "id": "5a48c72e17fdd2d4",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -134,18 +157,32 @@
             }
           },
           {
-            "id": "33340ab46a766735",
+            "id": "a38b8b159f0410cc",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Todas as propriedades"
+            }
+          },
+          {
+            "id": "b4d14a3c38821cbf",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Bem-vindo.md",
+                "file": "lab_13/Respostas.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Sumário de Bem-vindo"
+              "title": "Sumário de Respostas"
             }
           }
         ]
@@ -157,7 +194,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "obsidian-git:Open Git source control": false,
       "switcher:Abrir a troca rápida": false,
       "graph:Abrir visualização em gráfico": false,
       "canvas:Criar novo canvas": false,
@@ -167,23 +203,9 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "bac0539bc5cb0f75",
+  "active": "dcb07972b882c41b",
   "lastOpenFiles": [
-    "Livros/Cobol_Programmers.pdf",
-    "Livros/Clean Code.pdf",
-    "Sem título.md",
-    "C/The GNU C Programming Tutorial.pdf",
-    "COBOL/GnuCOBOL 3.2 - Programmer's Guide.pdf",
-    "Livros",
-    "C/UFCD-809/1. Introdução.md",
-    "COBOL/UFCD-807/1. Introdução.md",
-    "Sem título 1",
-    "COBOL/UFCD-807/Estrutura Básica de um programa em COBOL.md",
-    "C/The GNU C Library Reference Manual.pdf",
-    "C/UFCD-809",
-    "C",
-    "Bem-vindo.md",
-    "SQL/Sem título.md",
-    "SQL/UFCD-10788"
+    "pdf/Lab 1.3 - Controlo da Execucao - Parte I.pdf",
+    "lab_13/Respostas.md"
   ]
 }
