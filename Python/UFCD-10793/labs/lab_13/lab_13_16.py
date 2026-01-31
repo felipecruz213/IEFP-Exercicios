@@ -17,7 +17,7 @@ o 4.º dígito por 6,o 3.º dígito por 7, o 2.º dígito por 8, e o 1.º digito
 import sys
 
 
-def verificarNIF(nif):
+def verificar_nif(nif):
     nif_valido = False
     acumulador = 0
     if not nif.isdecimal() or (len(nif) != 9):
@@ -42,7 +42,7 @@ def main():
         entrada_nif = input("Insira um NIF: ")
     else:
         entrada_nif = sys.argv[1]
-    if verificarNIF(entrada_nif):
+    if verificar_nif(entrada_nif):
         print(f"O NIF {entrada_nif} é valido")
     else:
         print(f"O NIF {entrada_nif} É INVALIDO!")

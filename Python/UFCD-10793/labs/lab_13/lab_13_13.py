@@ -7,19 +7,20 @@ Acrescente a possibilidade de repetição
   o programa diz que "está muito próximo".
 """
 
+
 import random
 
 def validarNumero(num_min, num_max, numero):
     return (numero >= num_min) and (numero <= num_max)
 
 
-def gerarNumeroAleatorio(num_min, num_max):
+def gerar_numero_aleatorio(num_min, num_max):
     random.seed() # inicializa a seed conforme a hora atual do sistema
     numero_gerado = random.randint(num_min, num_max)
 
     return numero_gerado
 
-def verificarNumeroProximo(a, b, proximidade):
+def verificar_numero_proximo(a, b, proximidade):
     distancia = abs(a - b)
     esta_proximo = (distancia == proximidade)
     esta_muito_proximo = (distancia == 1)
@@ -29,7 +30,7 @@ def verificarNumeroProximo(a, b, proximidade):
 def main():
     numero_minimo = 1
     numero_maximo = 20
-    numero_correto = gerarNumeroAleatorio(numero_minimo, numero_maximo)
+    numero_correto = gerar_numero_aleatorio(numero_minimo, numero_maximo)
     numero_acertado = False
     while True:
         while True:
@@ -41,7 +42,7 @@ def main():
                 break
 
         if not (escolha_numero == numero_correto):
-            proximo, muito_proximo = verificarNumeroProximo(escolha_numero, numero_correto, 3)
+            proximo, muito_proximo = verificar_numero_proximo(escolha_numero, numero_correto, 3)
             if muito_proximo:
                 print("Esta muito proximo")
             elif proximo:

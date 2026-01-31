@@ -15,6 +15,8 @@ def e_primo(num: int) -> bool:
 Esta função não deve validar se o número é inteiro ou não (aliás, para já, esta função não deve efectuar
 qualquer validação, apenas deve devolver True se o número for primo, False em qualquer outro caso).
 """
+
+
 import sys
 
 

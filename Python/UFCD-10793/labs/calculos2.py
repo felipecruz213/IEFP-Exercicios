@@ -17,6 +17,7 @@
    $ 
 """
 
+
 from decimal import Decimal as dec
 
 numero = dec(input("Introduza um número: "))

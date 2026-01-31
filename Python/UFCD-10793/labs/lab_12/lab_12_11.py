@@ -10,16 +10,17 @@ Faça um programa para indicar se um determinado ano
   se um número é divisível por outro).
 """
 
+
 def main():
-    while(True):
-      Entrada_ano = int(input("Introduza o ano: "))
-      if Entrada_ano < 0:
+    while True:
+      entrada_ano = int(input("Introduza o ano: "))
+      if entrada_ano < 0:
           print("Insira Um ano positivo!!!!")
       else:
-        if CalcularAnoBissexto(Entrada_ano):
-            print(f"O ano {Entrada_ano} é bissexto")
+        if CalcularAnoBissexto(entrada_ano):
+            print(f"O ano {entrada_ano} é bissexto")
         else:
-            print(f"O ano {Entrada_ano} não é bissexto")
+            print(f"O ano {entrada_ano} não é bissexto")
 
 
 def CalcularAnoBissexto(ano):

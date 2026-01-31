@@ -10,31 +10,33 @@
     O programa deve exibir a despesa total sem IVA e sem gorjeta,
         o montante de IVA, o valor da gorjeta e a despesa total final.
 """
+
+
 from decimal import Decimal as dec
 import sys
 
 
 
 IVA = dec(0.23)
-TAXAEMPREGADO = dec(0.10)
-PRECOMENU = dec(15.00)
+TAXA_EMPREGADO = dec(0.10)
+PRECO_MENU = dec(15.00)
 
-numPessoas = int(sys.argv[1])
-totalContaSemTaxas = 0
-totalConta = 0
-totalIVA = 0
-totalTaxaEmpregado = 0
+num_pessoas = int(sys.argv[1])
+total_conta_sem_taxas = 0
+total_conta = 0
+total_iva = 0
+total_taxa_empregado = 0
 
-for x in range(numPessoas):
-    totalContaSemTaxas += PRECOMENU
-    totalTaxaEmpregado += PRECOMENU * TAXAEMPREGADO
-    totalIVA += PRECOMENU * IVA
-    totalConta += PRECOMENU + (PRECOMENU * IVA) + (PRECOMENU * TAXAEMPREGADO)
+for x in range(num_pessoas):
+    total_conta_sem_taxas += PRECO_MENU
+    total_taxa_empregado += PRECO_MENU * TAXA_EMPREGADO
+    total_iva += PRECO_MENU * IVA
+    total_conta += PRECO_MENU + (PRECO_MENU * IVA) + (PRECO_MENU * TAXA_EMPREGADO)
 
 
 print(f"\n\n", "-" * 10, " TOTAL ", "-" * 10)
 
-print(f"Total sem taxas: {totalContaSemTaxas}")
-print(f"IVA: {totalIVA}")
-print(f"Taxa Empregado: {totalTaxaEmpregado}")
-print(f"Valor Total: {totalConta}")
+print(f"Total sem taxas: {total_conta_sem_taxas}")
+print(f"IVA: {total_iva}")
+print(f"Taxa Empregado: {total_taxa_empregado}")
+print(f"Valor Total: {total_conta}")

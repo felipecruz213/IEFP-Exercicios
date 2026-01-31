@@ -2,6 +2,7 @@
 Estenda o programa anterior de modo a aceitar múltiplos valores introduzidos na linha de comandos
 """
 
+
 import sys
 
 

@@ -20,6 +20,7 @@
     Fim do programa
 """
 
+
 from decimal import Decimal as dec
 
 EUR = dec(1)
@@ -27,8 +28,7 @@ USD_EUR = dec(1.18)
 EUR_USD = dec(0.85)
 
 
-
-def validarSaida(entrada_escolha):
+def validar_saida(entrada_escolha):
     entrada_escolha = entrada_escolha.lower()
     escolha_valida = False
     escolha_sair = False
@@ -47,7 +47,7 @@ def validarSaida(entrada_escolha):
 
 
 
-def converterMoeda(eur, usd, invertido):
+def converter_moeda(eur, usd, invertido):
     if not invertido:
         conversao = eur * usd
     else:
@@ -69,14 +69,14 @@ def main():
             match escolha:
                 case 1:
                     valor_inserido = dec(input("Insira o valor em EUR: "))
-                    print(f"EUR > USD: : {converterMoeda(valor_inserido, USD_EUR, False):.2f}")
+                    print(f"EUR > USD: : {converter_moeda(valor_inserido, USD_EUR, False):.2f}")
                 case 2:
                     valor_inserido = dec(input("Insira o valor em USD: "))
-                    print(f"USD > EUR: : {converterMoeda(EUR_USD, valor_inserido, True):.2f}")
+                    print(f"USD > EUR: : {converter_moeda(EUR_USD, valor_inserido, True):.2f}")
 
             while True:
                 escolha = input("Deseja continuar? [S]im / [N]ão: ")
-                escolha_valida, escolha_sair = validarSaida(escolha)
+                escolha_valida, escolha_sair = validar_saida(escolha)
                 if not escolha_valida:
                     print("Escolha [S]im / [N]ão!")
                 else:

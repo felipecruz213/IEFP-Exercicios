@@ -10,12 +10,13 @@
      menos um.
 """
 
+
 from datetime import date
 from dateutil.relativedelta import relativedelta
 
-def calcularData(dataEntrada):
-    diferencaData = relativedelta(date.today(), dataEntrada)
-    return diferencaData.years
+def calcularData(data_entrada):
+    diferenca_data = relativedelta(date.today(), data_entrada)
+    return diferenca_data.years
 
 def main():
     ano = int(input("Ano: "))

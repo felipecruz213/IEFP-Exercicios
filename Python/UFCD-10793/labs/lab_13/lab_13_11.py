@@ -10,12 +10,13 @@
 
 """
 
+
 import random
 
 def main():
-    numCorreto = 13
-    numEscolha = int(input("Escolha um numero inteiro: "))
-    if numEscolha == numCorreto:
+    numero_correto = 13
+    numero_escolha = int(input("Escolha um numero inteiro: "))
+    if numero_escolha == numero_correto:
         print("ACERTOU!!!!")
     else:
         print("ERROOU!!")

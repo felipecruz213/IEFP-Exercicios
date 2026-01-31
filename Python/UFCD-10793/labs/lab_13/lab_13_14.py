@@ -12,6 +12,8 @@ T. Terminar
 Montante em dólares: 2000
 Euros -> 1438.85
 """
+
+
 from decimal import Decimal as dec
 
 EUR = dec(1)
@@ -19,7 +21,7 @@ USD_EUR = dec(1.18)
 EUR_USD = dec(0.85)
 
 
-def converterMoeda(eur, usd, invertido):
+def converter_moeda(eur, usd, invertido):
     if not invertido:
         conversao = eur * usd
     else:
@@ -39,9 +41,9 @@ def main():
             print("Obrigado Volte Sempre!!!!!!!")
         case 1:
             valor_inserido = dec(input("Insira o valor em EUR"))
-            print(f"EUR > USD: : {converterMoeda(valor_inserido, USD_EUR, False):.2f}")
+            print(f"EUR > USD: : {converter_moeda(valor_inserido, USD_EUR, False):.2f}")
         case 2:
             valor_inserido = dec(input("Insira o valor em EUR: "))
-            print(f"EUR > USD: : {converterMoeda(EUR_USD, valor_inserido, True):.2f}")
+            print(f"EUR > USD: : {converter_moeda(EUR_USD, valor_inserido, True):.2f}")
 
 main()

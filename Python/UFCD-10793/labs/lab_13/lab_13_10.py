@@ -14,23 +14,25 @@ Passos:
 
 Observação: Utilize a função uniform do módulo random para obter um número float entre 1 e N.
 """
+
+
 import random
 
 
 
-def calcularRaizQuadrada(num):
+def calcular_raiz_quadrada(num):
     resultado = 0
     tolerancia = 0.000001
-    raizaproximada: float = random.uniform(1, num)
+    raiz_aproximada: float = random.uniform(1, num)
 
     # N - e <= r * r <= N + e
-    while not (num - tolerancia <= raizaproximada * raizaproximada <= num + tolerancia):
-        raizaproximada = (raizaproximada + num / raizaproximada) / 2
+    while not (num - tolerancia <= raiz_aproximada * raiza_proximada <= num + tolerancia):
+        raiz_aproximada = (raiz_aproximada + num / raiz_aproximada) / 2
 
-    return raizaproximada
+    return raiz_aproximada
 
 def main():
     entrada = float(input("Insira um numero: "))
-    print(f"{calcularRaizQuadrada(entrada):.3f}")
+    print(f"{calcular_raiz_quadrada(entrada):.3f}")
 
 main()

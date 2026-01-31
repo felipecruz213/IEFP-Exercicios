@@ -7,6 +7,7 @@ salário bruto, que é um atributo de entrada.
 O programa deve imprimir o valor das contribuições e o valor do salário líquido.
 """
 
+
 from decimal import Decimal as dec
 
 
@@ -16,16 +17,16 @@ TAXA_SINDICATO = dec(5)
 
 salario_bruto = dec(input("Salario Bruto: "))
 
-total_SS = dec(salario_bruto * (TAXA_SS / 100))
-total_IRS = dec(salario_bruto * (TAXA_IRS / 100))
-total_SINDICATO = dec(salario_bruto * (TAXA_SINDICATO / 100))
-salario_liquido = dec(salario_bruto - (total_SS + total_IRS + total_SINDICATO))
+total_ss = dec(salario_bruto * (TAXA_SS / 100))
+total_irs = dec(salario_bruto * (TAXA_IRS / 100))
+total_sindicato = dec(salario_bruto * (TAXA_SINDICATO / 100))
+salario_liquido = dec(salario_bruto - (total_ss + total_irs + total_sindicato))
 
 print("-" * 5, " CALCULA SALARIO ", "-" * 5)
 print("")
-print(f"Segurança Social: {total_SS:.2f}")
-print(f"IRS             : {total_IRS:.2f}")
-print(f"Sindicato       : {total_SINDICATO:.2f}")
+print(f"Segurança Social: {total_ss:.2f}")
+print(f"IRS             : {total_irs:.2f}")
+print(f"Sindicato       : {total_sindicato:.2f}")
 print("")
 print("*" * 20)
 print(f"Salario Bruto   : {salario_bruto:.2f}")
