@@ -11,6 +11,9 @@ Faça um programa para indicar se um determinado ano
 """
 
 
+def CalcularAnoBissexto(ano):
+    return (ano % 4 == 0) or (ano % 400 == 0)
+
 def main():
     while True:
       entrada_ano = int(input("Introduza o ano: "))
@@ -22,8 +25,5 @@ def main():
         else:
             print(f"O ano {entrada_ano} não é bissexto")
 
-
-def CalcularAnoBissexto(ano):
-    return (ano % 4 == 0) or (ano % 400 == 0)
 
 main()

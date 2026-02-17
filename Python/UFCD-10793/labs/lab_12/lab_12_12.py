@@ -18,11 +18,14 @@ def calcularData(data_entrada):
     diferenca_data = relativedelta(date.today(), data_entrada)
     return diferenca_data.years
 
+
 def main():
     ano = int(input("Ano: "))
     mes = int(input("Mês: "))
     dia = int(input("Dia: "))
     data = date(ano, mes, dia)
     print(f"A pessoa tem {calcularData(data)} anos.")
+
+
 
 main()

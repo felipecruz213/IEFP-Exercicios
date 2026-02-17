@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "5b0d7b5122225d5d",
+        "id": "9ae262fab9fa126c",
         "type": "tabs",
         "children": [
           {
-            "id": "ca83451b461f4a27",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "Livros/Clean Code.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Clean Code"
-            }
-          },
-          {
-            "id": "9082d8924813fd0a",
+            "id": "258394af3c5acf0c",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -70,12 +58,27 @@
               "icon": "lucide-bookmark",
               "title": "Marcadores"
             }
+          },
+          {
+            "id": "1869f60339e448b0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Explorador de arquivos"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "dc47af25f7a559c6",
@@ -167,10 +170,10 @@
       "bases:Criar nova base": false
     }
   },
-  "active": "bac0539bc5cb0f75",
+  "active": "258394af3c5acf0c",
   "lastOpenFiles": [
-    "Livros/Cobol_Programmers.pdf",
     "Livros/Clean Code.pdf",
+    "Livros/Cobol_Programmers.pdf",
     "Sem título.md",
     "C/The GNU C Programming Tutorial.pdf",
     "COBOL/GnuCOBOL 3.2 - Programmer's Guide.pdf",

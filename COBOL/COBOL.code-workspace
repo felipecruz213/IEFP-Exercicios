@@ -7,7 +7,8 @@
 	"settings": {
 		"coboleditor.metadata_symbols": [
 			"prog02,main.cbl,1",
-			"aguiar,exercicio03.cbl,7"
+			"0808_final,exercicio_final.cbl,1",
+			"aguiar,exercicio03.cbl,1"
 		],
 		"coboleditor.metadata_entrypoints": [],
 		"coboleditor.metadata_types": [],
@@ -16,9 +17,15 @@
 			"1767719258870,UFCD-807/prog07_tabelas.cbl",
 			"1764266401364,UFCD-807/exercicios/exercicio05.cbl",
 			"1761155932453,UFCD-807/exercicios/exercicio02.cbl",
+			"1759424857543,UFCD-807/prog03.cbl",
+			"1761139137223,UFCD-807/prog06.cbl",
+			"1762356645479,UFCD-807/prog05.cbl",
 			"1769018855628,UFCD-808/exercicios/exercicio01.cbl",
-			"1769626486910,UFCD-808/exercicios/exercicio03.cbl"
+			"1771257001303,UFCD-808/exercicios/exercicio_final.cbl",
+			"1771342857427,UFCD-808/exercicios/exercicio04.cbl"
 		],
-		"coboleditor.metadata_knowncopybooks": []
+		"coboleditor.metadata_knowncopybooks": [
+			"SCREENIO,0808_final.cbl"
+		]
 	}
 }
