@@ -8,6 +8,7 @@
 		"coboleditor.metadata_symbols": [
 			"prog02,main.cbl,1",
 			"0808_final,exercicio_final.cbl,1",
+			"escola-do-saber,teste.cbl,1",
 			"aguiar,exercicio03.cbl,1"
 		],
 		"coboleditor.metadata_entrypoints": [],
@@ -22,7 +23,9 @@
 			"1762356645479,UFCD-807/prog05.cbl",
 			"1769018855628,UFCD-808/exercicios/exercicio01.cbl",
 			"1771257001303,UFCD-808/exercicios/exercicio_final.cbl",
-			"1771342857427,UFCD-808/exercicios/exercicio04.cbl"
+			"1771342875280,UFCD-808/exercicios/exercicio04.cbl",
+			"1771340609765,UFCD-808/exercicios/exercicio03.cbl",
+			"1771338698559,UFCD-808/exercicios/exercicio02.cbl"
 		],
 		"coboleditor.metadata_knowncopybooks": [
 			"SCREENIO,0808_final.cbl"
