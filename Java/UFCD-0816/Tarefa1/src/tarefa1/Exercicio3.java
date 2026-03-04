@@ -14,7 +14,7 @@ public class Exercicio3 {
         entrada = JOptionPane.showInputDialog(null,
                 "M - Masculino \nF- Feminino");
         
-        switch(entrada){
+        switch(entrada.toUpperCase()){
             case "M": 
                 JOptionPane.showMessageDialog(null, "Masculino");
                 break;
