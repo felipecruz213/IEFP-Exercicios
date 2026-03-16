@@ -6,16 +6,17 @@ atualizando o saldo da conta sempre que se efetue uma operação. No final dever
 saldo da conta.
 */
 
-package tarefa1;
+package tarefa2;
 
 import javax.swing.JOptionPane;
 
 public class Exercicio4 {
 
     public static void main(String[] args) {
-        float saldo, montante, resultado;
+        float saldo, montante;
+        saldo = 0.0f;
         boolean sair = true;
-        int Escolha = 0;
+        int Escolha;
         String escolhas[] = {"Crédito", "Débito", "Sair"};
         
         
@@ -44,17 +45,11 @@ public class Exercicio4 {
                        escolhas[0]);
 
             switch (Escolha){
-                case 0: 
-                    saldo = saldo - montante;
-                    break;
+                case 0 -> saldo = saldo - montante;
                 
-                case 1: 
-                    saldo = saldo + montante;
-                    break;
+                case 1 -> saldo = saldo + montante;
                     
-                case 2: 
-                    sair = false;
-                    break;
+                case 2 -> sair = false;
             }
             
             if(sair){

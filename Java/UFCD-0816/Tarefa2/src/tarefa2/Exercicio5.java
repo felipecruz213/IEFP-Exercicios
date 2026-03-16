@@ -1,5 +1,5 @@
 
-package tarefa1;
+package tarefa2;
 
 import javax.swing.JOptionPane;
 
@@ -21,20 +21,21 @@ public class Exercicio5 {
             Resposta = JOptionPane.showConfirmDialog(null,
                     Questoes[i], "Inquerito", JOptionPane.YES_NO_OPTION);
             switch(Resposta){
-                case -> Confirmacao++;
+                case 0 -> Confirmacao++;
             }
-            
-            switch(Confirmacao){
-                case 0,1 -> Mensagem = "Inocente";
-                case 2   -> Mensagem = "Suspeito";
-                case 3,4 -> Mensagem = "Cúmplice";
-                default  -> Mensagem = "Assasino";
-            }
-            JOptionPane.showMessageDialog(null,
-                    Mensagem, 
-                    "Inquérito", 
-                    JOptionPane.INFORMATION_MESSAGE);
         }
+        
+        switch(Confirmacao){
+            case 0,1 -> Mensagem = "Inocente";
+            case 2   -> Mensagem = "Suspeito";
+            case 3,4 -> Mensagem = "Cúmplice";
+            default  -> Mensagem = "Assasino";
+        }
+            
+        JOptionPane.showMessageDialog(null,
+                Mensagem, 
+                "Inquérito", 
+                JOptionPane.INFORMATION_MESSAGE);
         }
     }
     

@@ -34,6 +34,7 @@ def elevado_a(a, b):
 60
 
 
+
 ---
 
 **4. O que é uma função anónima e qual a finalidade da palavra-reservada lambda?  Quantas instruções ou 
