@@ -8,5 +8,16 @@ o valor de x que verifica a igualdade fazendo:
 x = (-b ± sqrt(b² - 4ac)) / 2a
 """
 
-def calcular_formula(a, b, c) -> tuple:
+import math
 
+def resolvente(a, b, c) -> tuple:
+    delta = b**2 - 4*a*c
+
+    raiz_delta = math.sqrt(delta)
+
+    x1 = (-b + raiz_delta) / (2 * a)
+    x2 = (-b - raiz_delta) / (2 * a)
+
+    return x1, x2
+
+print(resolvente(1, 1, 5))
